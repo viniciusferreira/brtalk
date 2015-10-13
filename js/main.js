@@ -1,8 +1,5 @@
 $(document).ready(function(){
     
-    var link_demonstracao_cliente   = 'http://lab.andrewd.com.br/cliente/';
-    var link_demonstracao_atendente = 'http://lab.andrewd.com.br/atendente/';
-    
     $("a[rel='tipsy']").tipsy({gravity: 'n'});
 
     $(document).bind("contextmenu",function(e){
@@ -30,7 +27,7 @@ $(document).ready(function(){
         var left    = (screen.width - width) / 2;
         var top     = ((screen.height - height) / 2) - 30;
 
-        window.open(link_demonstracao_cliente, 'at',  'height=' +height+ ', width=' +width+ ',status=no, toolbar=no, resizable=0, scrollbars=no, minimizable=no, left=' +left+ ', top=' +top);
+        window.open('http://lab.andrewd.com.br/brtalk/cliente/', 'at',  'height=' +height+ ', width=' +width+ ',status=no, toolbar=no, resizable=0, scrollbars=no, minimizable=no, left=' +left+ ', top=' +top);
 
     });
     
