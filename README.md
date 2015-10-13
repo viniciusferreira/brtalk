@@ -1,2 +1,2 @@
 # brtalk
-Sistema de Atendimento Online - Desenvolvido em PHP5 e MySQL
+Sistema de Atendimento Online - Desenvolvido em PHP e MySQL
