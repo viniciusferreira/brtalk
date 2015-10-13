@@ -1,0 +1,13 @@
+------------------------------------------------------------------------------------------
+Banco de dados:
+O arquivo brtalk.sql tem as todas as tabelas necessárias para o funcionamento do chat, e o usuário criado por default também.
+
+------------------------------------------------------------------------------------------
+Sobre o brTalk:
+Inicialmente desenvolvido e idealizado por Hédi Carlos Minin em 2010
+Sempre adicionando funcionalidades e continuando com o projeto - André Severino <andre@andrewd.com.br>
+
+------------------------------------------------------------------------------------------
+Dados de acesso padrão do atendente (administrador):
+  login: administrador
+  senha: 123456

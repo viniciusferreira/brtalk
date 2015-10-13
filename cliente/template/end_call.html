@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Atendimento Online Finalizado - {system_name}</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans|Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
+        <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../js/plugins/tipsy/jquery.tipsy.css" rel="stylesheet" type="text/css" />
+        <link href="css/client.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        
+        <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/tipsy/jquery.tipsy.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("a[rel='tipsy']").tipsy({gravity: 'n'});
+                
+                $(document).bind("contextmenu",function(e){
+                    return false;
+                });
+            });
+        </script>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div id="wrap">
+            
+            <header>
+                <img src="../img/brtalk_logo_empresa.jpg" id="logo-empresa" alt="brTalk Logo Empresa" />
+                <img src="../img/brtalk_logo.png" id="logo-brtalk" alt="brTalk" />
+            </header>
+
+            <section class="box-finalizado">
+                
+                <div id="box-msg-finalizado">
+                    <p>Atendimento encerrado, obrigado pelo contato. <i class="fa fa-smile-o"></i></p>
+                    <a href="javascript:window.close()" rel="tipsy" title="Fechar essa janela" id="ico-off"><i class="fa fa-power-off"></i> <span>fechar essa janela</span></a>
+                </div>
+                
+            </section>
+            
+            <footer>
+                
+                <span id="sys_info">
+                    © 2010-2015 <b>{system_name}</b> | versão {system_version}
+                </span>
+                
+                <span id="sys_dev">
+                    <i class="fa fa-code"></i> Desenvolvido por   
+                    <a href="mailto:hedicarlos@gmail.com?Subject=brTalk">Hédi Carlos Minin</a> e 
+                    <a href="mailto:andre@andrewd.com.br?Subject=brTalk">André Severino</a>
+                </span>
+                
+            </footer>
+            
+        </div>
+
+    </body>
+</html>

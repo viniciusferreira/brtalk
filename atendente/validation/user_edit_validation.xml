@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+
+    <field name="user_id">
+        <required>ID do usuário necessário</required>
+        <range min="1">ID do usuário necessário</range>
+    </field>	
+
+    <field name="name">
+        <required>Informe o campo Nome</required>
+    </field>	
+
+    <field name="email">
+        <required>Informe o campo E-mail</required>
+    </field>
+
+    <field name="level">
+        <required>Selecione o tipo de Usuário</required>
+    </field>
+
+</validation>

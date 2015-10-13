@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Atendimento Online Iniciado - {system_name}</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans|Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
+        <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../js/plugins/tipsy/jquery.tipsy.css" rel="stylesheet" type="text/css" />
+        <link href="css/client.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+        <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/cookie/jquery.cookie.js"></script>
+        <script type="text/javascript" src="../js/plugins/watermark/jquery.watermark.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/tipsy/jquery.tipsy.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript">
+
+            var _client = {
+                id : {client_id},
+                status : {client_status},
+                name : '{client_name}'
+            }
+
+            var _user = {
+                id : {client_user_id},
+                name : '{client_user_name}'
+            }
+
+            $(document).ready(function(){
+                
+                // Ajustes de altura
+                var altura_tela     = $(window).height();
+                var altura_header   = $('header').height();
+                var altura_footer   = $('footer').height();
+                
+                var altura_cliente = (altura_tela-altura_footer-altura_header);
+                
+                $("#box-cliente, #box-wait, #box-talk").css('height', altura_cliente+'px');
+                
+                var talk_info       = $("#talk_info").height();
+                var talk_footer     = $("#talk_footer").height();
+                
+                $("#talk").height(altura_cliente-talk_info-talk_footer+'px');
+                
+                $("#input").watermark('Digite a sua mensagem de até 300 caracteres e pressione ENTER para enviar');
+                
+                $("a[rel='tipsy']").tipsy({gravity: 'w'});
+            });
+
+        </script>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+	<div id="wrap-cliente">
+            
+            <header>
+                <img src="../img/brtalk_logo_empresa.jpg" id="logo-empresa" alt="brTalk Logo Empresa" />
+                <img src="../img/brtalk_logo.png" id="logo-brtalk" alt="brTalk" />
+            </header>
+	
+            <div id="box-cliente">
+                
+                <section id="box-wait">
+                    <div id="wait_info">Aguarde...</div>
+                </section>
+
+                <section id="box-talk">
+                    <div id="talk_info">
+                        <i class="fa fa-user"></i> Nome do(a) atendente <span id="user_name">{client_user_name}</span>
+                    </div>
+
+                    <div id="talk"></div>
+
+                    <div id="talk_footer">
+                        
+                        <div id="talk_options">
+                            <a href="end_call.php" rel="tipsy" title="Encerrar o atendimento">Encerrar atendimento</a>
+                            <span id="typing"></span>
+                        </div>
+
+                        <div id="talk_client">
+                            <strong><i class="fa fa-user"></i> {client_name}</strong>
+                            <span><i class="fa fa-send"></i> {client_email}</span>
+                        </div>
+
+                        <div id="talk_input">
+                            <textarea id="input" disabled="disabled" maxlength="300"></textarea>
+                        </div>
+                        
+                    </div>
+                </section>
+                
+            </div> 
+            
+            <footer>
+                
+                <span id="sys_info">
+                    © 2010-2015 <b>{system_name}</b> | versão {system_version}
+                </span>
+                
+                <span id="sys_dev">
+                    <i class="fa fa-code"></i> Desenvolvido por   
+                    <a href="mailto:hedicarlos@gmail.com?Subject=brTalk">Hédi Carlos Minin</a> e 
+                    <a href="mailto:andre@andrewd.com.br?Subject=brTalk">André Severino</a>
+                </span>
+                
+            </footer>
+		
+	</div>
+
+    </body>
+</html>

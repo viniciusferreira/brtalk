@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <title>{system_name} - Login</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans|Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
+        <link href="css/login.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        
+        <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/watermark/jquery.watermark.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#form_login #user').watermark('Digite seu usuário/login');
+                $('#form_login #password').watermark('Digite sua senha');
+                
+                $(document).bind("contextmenu",function(e){
+                    return false;
+                });
+            });
+        </script>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div id="wrap">
+            
+            <section>
+
+                <div id="box-logo">
+                    
+                    <img src="img/brtalk_login.png" alt="brTalk" />
+                    <span>Atendimento Online</span>
+                    
+                </div>
+
+                <div id="box-form">
+                    
+                    <div id="box-erro">{error}</div>
+                    
+                    <form name="form_login" id="form_login" method="post" action="index.php" accept-charset="utf-8">
+                        <input type="text" name="user" id="user" maxlength="30" autocomplete="off" />
+                        <input type="password" name="password" id="password" maxlength="12" autocomplete="off" />
+                        <button type="submit" name="login" value="Entrar">Entrar</button>
+                    </form>
+                    
+                </div>
+
+            </section>
+
+            <footer>
+                
+                <span id="sys_info">
+                    © 2010-2015 <b>{system_name}</b> | versão {system_version}
+                </span>
+                
+                <span id="sys_dev">
+                    Desenvolvido e mantido com <img src="../img/ico-coracao.png" /> por  
+                    <a href="mailto:hedicarlos@gmail.com?Subject=brTalk">Hédi Carlos Minin</a> e 
+                    <a href="mailto:andre@andrewd.com.br?Subject=brTalk">André Severino</a>
+                </span>
+                
+            </footer>
+
+        </div>
+        
+    </body>
+</html>

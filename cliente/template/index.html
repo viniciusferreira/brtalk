@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <title>Atendimento Online - {system_name}</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans|Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
+        <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../js/plugins/tipsy/jquery.tipsy.css" rel="stylesheet" type="text/css" />
+        <link href="css/client.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        
+        <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/watermark/jquery.watermark.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/tipsy/jquery.tipsy.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#form_acesso #name').watermark('Coloque seu nome');
+                $('#form_acesso #email').watermark('exemplo@provedor.com.br');
+                
+                $("a[rel='tipsy']").tipsy({gravity: 'n'});
+                
+                $(document).bind("contextmenu",function(e){
+                    return false;
+                });
+            });
+        </script>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        
+        <div id="wrap">
+            
+            <header>
+                <img src="../img/brtalk_logo_empresa.jpg" id="logo-empresa" alt="brTalk Logo Empresa" />
+                <img src="../img/brtalk_logo.png" id="logo-brtalk" alt="brTalk" />
+            </header>
+
+            <!-- begin_block_form -->
+            <section id="box-form">
+                
+                <div id="box-erro">{error}</div>
+                
+                <form name="form_acesso" id="form_acesso" method="post" action="index.php" accept-charset="utf-8">
+                    <label for="name"><i class="fa fa-user"></i> Digite seu nome</label>
+                    <input type="text" name="name" id="name" autocomplete="off" maxlength="160" />
+
+                    <label for="email"><i class="fa fa-envelope"></i> Digite seu e-mail</label>
+                    <input type="text" name="email" id="email" autocomplete="off" maxlength="80" />
+
+                    <input type="submit" name="login" value="Iniciar Atendimento" />
+                </form>
+                
+            </section>
+            <!-- end_block_form -->
+		
+            <!-- begin_block_info -->
+            <section id="box-offline">
+                
+                <div id="box-msg">
+                    <a href="javascript:window.close()" rel="tipsy" title="Fechar essa janela" id="ico-off"><i class="fa fa-power-off"></i> <span>fechar</span></a>
+                    <p>Desculpe, nosso atendimento está offline no momento.</p>
+                    <p>O que você acha de utilizar outra forma de contato ? Veja algumas opções abaixo.</p>
+                </div>
+                
+                <!-- Pode ser inserido um link para um formulário de contato, ou criar um formulário de contato aqui -->
+                
+                <div id="box-contato">
+                    <p><i class="fa fa-hand-o-right"></i> Canais de atendimento</p>
+                    
+                    <ul id="ct">
+                        <li><i class="fa fa-phone"></i> +55 (99) 9999-9999 | +55 (99) 9999-9999</li>
+                        <li><i class="fa fa-mobile"></i> +55 (99) 99999-9999</li>
+                        <li><i class="fa fa-whatsapp"></i> +55 (99) 99999-9999</li>
+                        <li><i class="fa fa-map-marker"></i> Avenida Paulista, n° 9999 - 9° andar - Sala 999 - São Paulo, Brazil</li>
+                        <li><i class="fa fa-envelope"></i> Caixa Postal: 99.999 - CEP: 99.999-999</li>
+                        <li><i class="fa fa-send"></i> <a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></li>
+                        <li><i class="fa fa-send"></i> <a href="mailto:sac@seudominio.com.br">sac@seudominio.com.br</a></li>
+                    </ul>
+                    
+                    <ul id="rs">
+                        <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-wordpress"></i></a></li>
+                        <li><a href="#"><i class="fa fa-street-view"></i></a></li>
+                    </ul>
+                </div>
+                
+            </section>
+            <!-- end_block_info -->
+            
+            <footer>
+                
+                <span id="sys_info">
+                    © 2010-2015 <b>{system_name}</b> | versão {system_version}
+                </span>
+                
+                <span id="sys_dev">
+                    <i class="fa fa-code"></i> Desenvolvido por   
+                    <a href="mailto:hedicarlos@gmail.com?Subject=brTalk">Hédi Carlos Minin</a> e 
+                    <a href="mailto:andre@andrewd.com.br?Subject=brTalk">André Severino</a>
+                </span>
+                
+            </footer>
+            
+        </div>
+        
+    </body>
+</html>

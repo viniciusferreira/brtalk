@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+    
+    <field name="name">
+        <required>Informe o campo Nome</required>
+    </field>	
+
+    <field name="user">
+        <required>Informe o campo Usuário</required>
+        <length min="4" max="30">Usuário deve ter de {MIN} a {MAX} caracteres</length>
+        <regex exp="/^[a-zA-Z0-9_]*$/">Usuário conter somente letras, números e _</regex>
+    </field>
+
+    <field name="email">
+        <required>Informe o campo E-mail</required>
+    </field>
+
+    <field name="level">
+        <required>Selecione o tipo de Usuário</required>
+    </field>
+
+    <field name="password">
+        <required>Informe o campo Senha</required>
+        <length min="6" max="12">Senha deve ter de {MIN} a {MAX} caracteres</length>
+        <regex exp="/^[a-zA-Z0-9_]*$/">Senha deve conter somente letras, números e _</regex>
+        <compare field="confirm_password">Senha não confere com Repita Nova Senha</compare>
+    </field>
+    
+</validation>

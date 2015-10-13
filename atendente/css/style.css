@@ -1,0 +1,602 @@
+@charset "UTF-8";
+
+/**
+* @file     style.css
+* @version  1.0
+*
+* @author   Hédi Carlos Minin
+* @email    hedicarlos@gmail.com
+*
+* @author   André da Silva Severino
+* @email    andre@andrewd.com.br
+*
+* @url      http://andrewebdeveloper.github.io/brtalk/
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#sound{
+    visibility: hidden;
+}
+#brtalk_logo{
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1;
+}
+#user_info{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    text-align: right;
+}
+#user_info h1{
+    font-size: 22px;
+    font-family: "Oswald", Arial, sans-serif;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 2px;
+    color: #069;
+    display: block;
+    padding: 0;
+    margin: 0 0 7px 0;
+}
+#user_info a{
+    font-size: 14px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+#user_info a:hover{
+    color:red;
+}
+
+/* Janela chat */
+.talk_info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    border-bottom: 2px solid #999;
+    overflow: hidden;
+    padding: 5px;
+    color: #777;
+    line-height: 140%;
+    font-size: 11px;
+}
+.talk_info h3{
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+.talk{
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    right: 5px;
+    bottom: 128px;
+    overflow: auto;
+    z-index: 1;
+}
+.talk p{
+    padding: 2px 5px 2px 15px;
+    margin: 0;
+}
+.talk_client, .talk_user{
+    font-weight: bold;
+    padding: 15px 5px 2px 5px !important;
+}
+.talk_client{ color: #0098CA !important; }
+.talk_user{ color: #777 !important; }
+.talk_options{
+    position: absolute;
+    left: 0;
+    right: 0;	
+    bottom: 76px;
+    background-color: #FFF;
+    height: 40px;
+    border-top: 1px solid #CCC;
+    z-index: 3;
+    padding-top: 5px;
+}
+.talk_options a{
+    display: block;
+    height: 35px;
+    width: 50px;
+    border-right: 1px solid #CCC;
+    float: left;
+    background-repeat: no-repeat;
+    background-image: url(../../img/talk_buttons.png);
+}
+.talk_options a:hover{
+    background-image: url(../../img/talk_buttons_over.png);
+}
+#talk_send_email{
+    background-position: 0 center;	
+}
+#talk_end_call{
+    background-position: -50px center;	
+}
+.talk_options span{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 11px;
+    color: #777;
+}
+.talk_input{
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;	
+    height: 50px;
+    padding: 5px;
+    border: 2px solid #999;
+    z-index: 3;
+}
+.talk_input textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    outline: none;
+    resize: none;
+}
+.talk_alert{
+    position: absolute;
+    top: 47px;
+    left: 5px;
+    right: 5px;
+    padding: 10px;
+    background-color: #FFCC66;
+    font-size: 11px;
+    border: 1px solid #FFBE7D;
+    display: none;
+    z-index: 2;
+}
+
+/* Janela clientes */
+.client_list_info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    height: 14px;
+    color: #777;
+    border-bottom: 1px solid #999;
+    overflow: hidden;
+}
+.client_list{
+    position: absolute;
+    top: 45px;
+    left: 5px;
+    right: 5px;
+    bottom: 22px;
+    overflow: auto;
+}
+.client_list a{
+    display: block;
+    padding: 8px 30px 8px 8px;
+    margin: 0;
+    font-weight: bold;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #FFF;
+    text-decoration: none;
+    position: relative;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.client_list a:hover{
+    color: #069;
+    background-color: #EEE;
+}
+.client_list a span{
+    display: block;
+    margin-top: 2px;
+    font-size: 10px;
+    color: #777;
+    font-weight: normal;
+}
+.client_list_status{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 11px;
+    color: #777;
+    border-top: 1px solid #999;
+    cursor: default;
+}
+
+.status_wait{
+    background-image: url(../../img/wait.png);	
+}
+.status_talk{
+    background-image: url(../../img/talk.png);	
+}
+
+/* Janela opções */
+.options{
+    padding: 15px;
+}
+.options label{
+    position: relative;
+    padding: 7px 7px 7px 27px;
+    margin: 5px;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #FFF;
+}
+.options label:hover{
+    color: #069;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+.options label input{
+    position: absolute;
+    display: block;
+    top: 5px;
+    left: 5px;
+}
+
+/* Janela temas */
+.themes{
+    padding: 15px;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.themes p{
+    float: left;
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+}
+.themes p img{
+    display: block;
+    margin-top: 10px;
+    padding: 3px;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+.themes p img:hover{
+    background-color: #DDD;
+}
+
+/* Janela histórico */
+.history_selected{
+    color: #069;
+    background-color: #EEE;
+    background-image: url(../../img/history_arrow.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+#user_history, #client_history, #talk_history{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 1%;
+}
+#user_history{
+    left: 0;
+    width: 26%;
+    overflow: auto;
+    border-right: 1px solid #999;
+}
+#user_history label{
+    display:block;
+    margin-bottom: 3px;
+}
+#user_history input{
+    display:block;
+    padding: 3px;
+    border: 1px solid #777;
+    width: 100px;
+}
+#user_history input:focus{
+border: 1px solid #CC6600;
+background-color: #FFFFD5;
+    outline: none;
+}
+#user_history div{
+    position: absolute;
+    border-top: 1px dotted #CCC;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    overflow: auto;
+    padding: 10px 0 5px 0;
+}
+#user_history div a, #client_history a{
+    display:block;
+    padding: 8px;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #FFF;
+    font-weight: bold;
+}
+#user_history div a:hover, #client_history a:hover{
+    background-color: #EEE;
+}
+#client_history a span{
+    display: block;
+    margin: 0;
+    color: #555;
+    font-size: 11px;
+    font-weight: normal;
+}
+#client_history{
+    left: 28%;
+    width: 26%;
+    border-right: 1px solid #999;
+    overflow: auto;
+}
+#talk_history{
+    right: 0;
+    width: 42%;
+    overflow: auto;
+}
+#talk_history > span{
+    display: block;
+    margin-bottom: 2px;
+    color: #069;
+    font-weight: bold;
+}
+#talk_history p{
+    display: block;
+    padding: 0;
+    margin: 0 0 10px 65px;
+}
+#talk_history  p span{
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+}
+#talk_history  p span strong{
+    margin-right: 6px;
+    color: #555;
+    font-size: 11px;
+    font-weight: normal;
+    position: absolute;
+    left: -50px;
+    top: 2px;
+}
+
+/* Formulários */
+.form {
+    padding: 25px;
+}
+.form label{
+    display: block;
+    position: absolute;
+    width: 115px;
+    left: -120px;
+    text-align: right;
+    top: 5px;
+    font-weight: bold;
+}
+.form div{
+    position: relative;
+    margin: 0 0 10px 120px;
+}
+.form select, .form input, .form textarea{
+    display: block;
+    padding: 4px;
+    border: 1px solid #999;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.form input:focus, .form select:focus, .form textarea:focus{
+border: 1px solid #CC6600;
+background-color: #FFFFD5;
+    outline: none;
+}
+.form > a{
+    display: block;
+    padding: 7px 12px 7px 12px;
+    border: 1px solid #999;
+    outline: #DDD solid thin;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0 0 120px;
+    float: left;
+}
+.form > a:hover{
+    border: 1px solid #777;
+    outline: #CCC solid thin;
+    background-color: #EEE;
+}
+.form textarea{
+    width: 90% !important;
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+/* Janel E-mail */
+.send_email input{
+    width: 90% !important;	
+}
+
+
+/* Janela usuários */
+#user_list{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    bottom: 15px;
+    overflow: auto;
+    width: 45%;
+}
+#user_list a{
+    display:block;
+    padding: 8px;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #FFF;
+    position: relative;
+    margin-right: 10px;
+    font-weight: bold;
+}
+#user_list a:hover{
+    background-color: #EEE;
+}
+#user_list a span{
+    display: block;
+    font-size: 11px;
+    color: #555;
+    font-weight: normal;
+}
+#user_list a strong{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 11px;
+    color: #555;
+    font-weight: normal;
+}
+.user_add{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    width: 45%;
+    border-left: 1px solid #999;
+}
+.user_add h3{
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid #CCC;
+    margin: 0 0 25px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #069;
+}
+.user_add a{
+    float: left !important;
+}
+.user_add a + a{
+    margin-left: 10px !important;
+}
+#user_add_remove{
+    display: none;
+}
+
+/* Alerta */
+.alert{
+    padding: 15px;
+    height: 45px;
+    overflow: hidden;
+}
+.alert span{
+    display: block;
+}
+
+a.alert_close{
+    display: block;
+    padding: 7px 0 7px 0;
+    border: 1px solid #999;
+    outline: #DDD solid thin;
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+a.alert_close:hover{
+    border: 1px solid #777;
+    outline: #CCC solid thin;
+    background-color: #EEE;
+}
+
+/* Janela dicas */
+.info, .about{
+    padding: 20px;
+}
+.info p{
+    margin: 0;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px dotted #CCC;
+}
+
+
+/* Janela sobre */
+.about{
+    cursor: default;
+}
+.about #link-site{
+    display: block;
+    border-top: 1px dotted #CCC;
+    padding-top: 8px;
+    margin-top: 12px;
+    font-size: 12px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+.about #link-site i{
+    font-size: 20px;
+}
+.about h2{
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    font-family: "Oswald", Arial, sans-serif;
+    color: #777;
+    font-weight: normal;
+}
+.about p{
+    margin-bottom:6px;
+}
+.about p i{
+    padding-right: 8px;
+}
+.about p a{
+    padding-left: 18px;
+}
+.about p a i{
+    padding-right: 4px;
+}
+.about ul{
+    color: #555;
+    margin-top: 20px;
+    list-style: none;
+}
+.about ul li{
+    margin:3px 0px;
+}
+
+.about ul li i{padding:0px 2px;}
+.about ul li i.fa.fa-heart{color:red;}
+.about ul li i:hover{color:#069;}
+
+/* Janela mensagens pré-definidas */
+.predefined_messages{
+    padding: 20px;
+    overflow: auto;
+}
+.predefined_messages h4{
+    padding: 0 0 10px 0;
+    margin: 0;
+    border-bottom: 2px solid #999;
+    font-size: 11px;
+    color: #555;
+    font-weight: normal;
+}
+.predefined_messages p{
+    padding: 10px 0 10px 0;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px solid #CCC;
+}
+.predefined_messages p strong{
+    display: block;
+}

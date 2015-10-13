@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+    
+    <field name="user">
+        <required>Informe o seu Usuário/Login</required>
+    </field>	
+
+    <field name="password">
+        <required>Informe a sua Senha</required>
+    </field>
+    	
+</validation>

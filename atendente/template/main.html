@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <title>{system_name}</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans|Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
+        <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../js/plugins/tipsy/jquery.tipsy.css" type="text/css" />
+        <link href="theme/basic/desktop.css" rel="stylesheet" type="text/css" id="css_desktop" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+        <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/cookie/jquery.cookie.js"></script>
+        <script type="text/javascript" src="../js/plugins/tipsy/jquery.tipsy.js"></script>
+        <script type="text/javascript" src="../js/plugins/masked/jquery.masked.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="js/desktop.js"></script>
+        <script type="text/javascript" src="js/window.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/atendente.js"></script>
+        <script type="text/javascript">
+
+            var _user = {
+                        id : {user_id},
+                        status : {user_status},
+                        name : '{user_name}',
+                        email : '{user_email}',
+                        photo : '{user_photo}'
+                    };
+
+        </script>
+    </head>
+
+    <body>
+
+        <img src="../img/brtalk_logo_admin.png" alt="brTalk" id="brtalk_logo" />
+
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="sound" width="1" height="1"> 
+            <param name="movie" value="sound.swf" />
+            <param name="AllowScriptAccess" value="always" />
+            <param name="autoplay" value="false" />
+            <param name="quality" value="high" />
+            <param name="wmode" value="transparent" />
+            <embed name="sound" src="sound.swf" autoplay="false" swLiveConnect="true" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1" height="1"></embed>
+        </object>
+
+        <div id="user_info">
+            <h1>{user_name}</h1>
+            <a href="logout.php">Sair do sistema <i class="fa fa-sign-out"></i></a>
+        </div>
+
+        <div class="shortcuts">
+            <a href="javascript:Options()"><img src="img/options.png" />Opções</a>
+            <a href="javascript:Tips()"><img src="img/tip.png" /> Dicas de utilização</a>
+            <a href="javascript:ChangeTheme()"><img src="img/theme.png" /> Temas</a>
+            <a href="javascript:ChangePassword()"><img src="img/password.png" /> Alterar senha</a>
+            <!-- begin_block_administrator -->
+            <a href="javascript:Users()"><img src="img/profile.png" /> Usuários</a>
+            <a href="javascript:History()"><img src="img/history.png" /> Histórico</a>
+            <!-- end_block_administrator -->
+            <a href="javascript:PredefinedMessages()"><img src="img/keyboard.png" /> Mensagens <br/>pré-definidas</a>
+            <a href="javascript:About()"><img src="img/info.png" /> Sobre o brTalk</a>
+        </div>
+
+    </body>
+</html>

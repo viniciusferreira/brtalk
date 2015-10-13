@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+    
+    <field name="from">
+        <required>Informe o campo De</required>
+    </field>	
+
+    <field name="to">
+        <required>Informe o campo Para</required>
+    </field>	
+
+    <field name="subject">
+        <required>Informe o campo Assunto</required>
+    </field>	
+
+    <field name="message">
+        <required>Informe o campo Mensagem</required>
+    </field>
+    
+</validation>

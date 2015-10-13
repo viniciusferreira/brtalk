@@ -1,0 +1,38 @@
+v 1.1.0
+------------------------------------------------------------------------------------------
+Sistema utilizando PDO;
+Fixado a Engine das tabelas do MySQL para InnoDB; 
+Modificado charset do sistema para utf-8;
+Atualizado framework jQuery para a versão 1.11.3;
+Reescrito todos os arquivos para corrigir problemas de acentuação;
+Atualizado a criptografia do password dos usuários de md5 para sha1;
+Adicionado salt no password dos usuários para melhorar a segurança da autenticação do sistema;
+Atualizado o favicon antigo por outro novo com melhor resolução;
+Adicionado novas fontes personalizadas;
+Adicionado ícones personalizados com ajuda do projeto font awesome v.4+;
+Reformulada o layout da página de login do administrador/atendente em HTML5;
+Reformulada as páginas de acesso do usuário(cliente) ao atendimento online em HTML5;
+
+
+v 1.0.2
+------------------------------------------------------------------------------------------
+Adicionado opção de mostrar/ocultar conteúdo da janela ao arrastar
+Fixado compatibilidade com PHP 5.3.0, removendo o uso da função ereg();
+
+
+v 1.0.1
+------------------------------------------------------------------------------------------
+Fixado compatibilidade com PHP 5.3.0, removendo o uso da função session_is_registered();
+Fixado problema de posicionamendo das janelas;
+Fixado problema de login com email contendo os caracteres . e -;
+Adicionado restrição de login do cliente, não permitindo seu login quando não há atendende online;
+Adicionado restrição de login do atendente, não permitindo mais de um login com o mesmo usuário;
+Removido opções de enviar email e encerrar atendimento quando o atendimento foi iniciado por outro atendente;
+Adicionado campo IP na tabela de clientes;
+Adicionado mensagens pré-definidas;
+
+
+v 1.0.0
+------------------------------------------------------------------------------------------
+Sistema brTalk lançado
+

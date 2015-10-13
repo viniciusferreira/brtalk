@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+/**
+* @file     theme/nature/desktop.css
+* @version  1.0
+*
+* @author   Hédi Carlos Minin
+* @email    hedicarlos@gmail.com
+*
+* @author   André da Silva Severino
+* @email    andre@andrewd.com.br
+*
+* @url      http://andrewebdeveloper.github.io/brtalk/
+*/
+html, body{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: #DDD;
+    background-image: url(wallpaper.jpg);
+    background-position: center center;
+}
+a{
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+    outline: none;
+}
+a:hover{ color: #069; }
+
+/* window */
+.window{
+    top: 100px;
+    left: 150px;
+    height: 300px;
+    width: 300px;
+    background-color: #FFF;
+    border: 1px solid #999;
+    position: absolute;
+    z-index: 5;
+}
+.window > div:first-child{
+    height: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-right: 3px;
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 1px solid #999;
+    background-color: #F5F5F5;
+}
+.window > div:first-child a{
+    display: block;
+    height: 19px;
+    width: 19px;
+    float: right;
+    margin: 5px 3px 0 0;
+    background-repeat: no-repeat;
+    background-image: url(window_buttons.gif);
+}
+.window > div:first-child a:hover{
+    background-image: url(window_buttons_over.gif); 
+}
+.window > div:first-child h4{
+    padding: 8px 8px 8px 30px;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 3px;
+    bottom: 0;
+    right: 80px;
+    cursor: move;		
+    font-size: 12px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: left 3px;
+}
+.window > div:first-child + div{
+    position: absolute;
+    top: 31px;
+    left: 0;
+    right: 0;
+    bottom: 9px;
+    background-color: #FFF;
+    overflow: hidden;
+}
+.window > div:first-child + div + div{
+    position: absolute;
+    height: 8px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    cursor: nw-resize;
+    border-top: 1px solid #999;
+    background-image: url(resize.gif);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #F5F5F5;
+}
+.window_maximize_buttom{ background-position: -39px center; }
+.window_restaure_buttom{ background-position: -58px center; }
+.window_minimize_buttom{ background-position: 0 center; }
+.window_close_buttom{ background-position: -20px center; }
+.window_move{
+    background-image: url(move.png);
+    border: 1px solid #FFF;
+    outline: #333 solid thin;
+    position: absolute;
+}
+
+/* window focused */
+.window_focus{
+    top: 100px;
+    left: 150px;
+    height: 300px;
+    width: 300px;
+    border: 1px solid #6CB6FF;
+    position: absolute;
+    z-index: 5;
+    background-color: #FFF;
+}
+.window_focus > div:first-child{
+    height: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-right: 3px;
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 1px solid #91C8FF;
+    background-color: #DFEFFF;
+}
+.window_focus > div:first-child a{
+    display: block;
+    height: 19px;
+    width: 19px;
+    float: right;
+    margin: 5px 3px 0 0;
+    background-repeat: no-repeat;
+}
+.window_focus > div:first-child a:hover{
+    background-image: url(window_buttons_over.gif); 
+}
+.window_focus > div:first-child h4{
+    padding: 8px 8px 8px 30px;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 3px;
+    bottom: 0;
+    right: 80px;
+    cursor: move;		
+    font-size: 12px;
+    color: #069;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: left 3px;
+}
+.window_focus > div:first-child + div{
+    position: absolute;
+    top: 31px;
+    left: 0;
+    right: 0;
+    bottom: 9px;
+    background-color: #FFF;
+    overflow: hidden;
+}
+.window_focus > div:first-child + div + div{
+    position: absolute;
+    height: 8px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    cursor: nw-resize;
+    border-top: 1px solid #91C8FF !important;
+    background-image: url(resize.gif);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #DFEFFF !important;
+}
+
+/* taskbar */
+#taskbar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 37px;
+    border-top: 1px solid #333;
+    z-index: 3000;
+    padding-bottom: 18px;
+    background-image: url(taskbar.png);
+}
+#taskbar span{
+    display: block;
+    float: right;
+    height: 100%;
+    width: 25px;
+    height: 35px;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+    background-color: #DDD;
+    cursor: pointer;
+    background-image: url(show_desktop.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#taskbar span:hover{
+    background-color: #CCC;
+}
+.taskbar a{
+    display: block;
+    float: left;
+    padding: 8px 10px 8px 33px;
+    margin: 8px 0 0 8px;
+    background-color: #EEE;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #999;
+    border-top: 1px solid #BBB;
+    border-left: 1px solid #BBB;
+    max-width: 130px;
+    min-width: 60px;
+    height: 15px;
+    overflow: hidden;
+    background-position: 3px center;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+}
+.taskbar a:hover{
+    border-bottom: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+    border-top: 1px solid #666;
+    border-left: 1px solid #999;
+    background-color: #DDD;
+}
+a.taskbar_focus{
+    border-bottom: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+    border-top: 1px solid #666;
+    border-left: 1px solid #999;
+    background-color: #DFEFFF;
+    color: #069;
+}
+a.taskbar_call{
+    border-bottom: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+    border-top: 1px solid #666;
+    border-left: 1px solid #999;
+    background-color: #333;
+    color: #FFF;
+}
+
+
+/* shortcuts */
+.shortcuts{
+    margin: 30px 0 0 30px;
+    width: 400px;
+}
+.shortcuts a{
+    display: block;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    color: #FFF;
+    border-radius: 8px;
+    background-image: url(taskbar.png);
+}
+.shortcuts a:hover{ 
+    text-decoration: none;
+    background: #069;
+}
+.shortcuts a img{
+    display: block;
+    margin: 5px auto 5px auto;
+    border: none;
+}
+
+/* modal */
+#modal{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    -khtml-opacity: 0.7;
+    -moz-opacity: 0.7;
+    filter: alpha(opacity=70);
+    z-index: auto;
+}
+
+/* context menu taskbar */
+#context_menu{
+    position: absolute;
+    border: 1px solid #999;
+    background-color: #FFF;
+    z-index: 3005;
+    display: none;
+    display: none;
+    padding: 5px 12px 5px 25px;
+    text-decoration: none;
+    background-image: url(close.gif);
+    background-repeat: no-repeat;
+    background-position: 3px center;
+    color: #333;
+shortcuts}
+#context_menu:hover{
+    background-color: #EEE;
+    color: #069;
+}
+
+/* usuario */
+#user_info{
+    background: #000;
+    padding: 8px 20px;
+    border-radius: 4px;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+#user_info h1, #user_info a{
+    color: #FFF;
+}

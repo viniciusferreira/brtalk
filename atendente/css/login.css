@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/**
+* @file     login.css
+* @version  1.0
+*
+* @author   Hédi Carlos Minin
+* @email    hedicarlos@gmail.com
+*
+* @author   André da Silva Severino
+* @email    andre@andrewd.com.br
+*
+* @url      http://andrewebdeveloper.github.io/brtalk/
+*/
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+}
+
+b, strong{font-weight:bold;}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background: url(../img/bg-login.jpg) left center no-repeat;
+    background-size: cover;
+}
+
+#wrap {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+}
+
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -420px;
+    margin-top: -190px;
+    width: 840px;
+    height: 340px;
+    overflow: hidden;
+}
+
+#box-logo {
+    width: 415px;
+    height: 340px;
+    padding-right: 50px;
+    border-right: 1px dashed #FFF;
+    float: left;
+    text-align: center;
+}
+#box-logo img{
+    margin-top: 45px;
+}
+#box-logo span {
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 44px;
+    color: #FFF;
+    cursor: default;
+}
+
+#box-form {
+    float: left;
+    padding-left: 50px;
+}
+#box-erro {
+    position:absolute;
+}
+#box-erro ul {
+    width: 280px;
+    list-style: none;
+    background: #cc0000;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+#box-erro ul li {
+    color: #FFF;
+    font: bold 12px Arial;
+    margin: 2px 0px;
+}
+
+form {
+    margin-top: 70px;
+    width: 300px;
+    text-align: right;
+}
+form input {
+    width: 260px;
+    padding: 20px 20px;
+    font-size: 22px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 0px 0px 8px 8px;
+    margin-bottom: 10px;
+}
+form button {
+    border: none;
+    background: #3FB2D9;
+    color: #FFF;
+    cursor: pointer;
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    font-family: "Oswald", Arial, sans-serif;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+form button:hover {
+    background: #069;
+}
+form button:focus{
+    outline: none;
+}
+form input:focus {
+    outline: none;
+    background: #f4f7f8;
+    color: #000;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 10px;
+    height: 30px;
+    border-top: 1px dotted #CCC;
+    cursor: default;
+}
+footer #sys_info,
+footer #sys_dev,
+footer #sys_dev a {
+    font-family: "Open Sans Condensed", Arial, sans-serif;
+    font-size: 14px; 
+    color: #FFF;
+}
+footer #sys_info {
+    font-family: "Open Sans", Arial, sans-serif; 
+    position: absolute; 
+    left: 100px;
+} 
+footer #sys_dev {
+    position: absolute; 
+    right: 95px;
+}
+footer #sys_dev a {
+    margin:0px 5px;
+}
+footer #sys_dev a:hover {
+    color: #3FB2D9;
+    text-decoration: none;
+}
